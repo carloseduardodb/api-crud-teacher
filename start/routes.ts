@@ -20,4 +20,13 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', 'TeachersController.index')
+Route.get('/', () => {
+  return {
+    status: 'online',
+  }
+})
+Route.post('/teacher/create', 'TeachersController.create')
+Route.get('/teacher', 'TeachersController.index')
+Route.get('/teacher/:id', 'TeachersController.show')
+Route.delete('/teacher/delete/:id', 'TeachersController.destroy')
+Route.put('/teacher/update/:id', 'TeachersController.update')
