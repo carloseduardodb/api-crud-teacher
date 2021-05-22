@@ -5,13 +5,13 @@ export default class Teacher extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
-  @column({ isPrimary: true })
+  @column({ isPrimary: false })
   public name: string
 
-  @column({ isPrimary: true })
+  @column({ isPrimary: false })
   public surname: string
 
-  @column({ isPrimary: true })
+  @column({ isPrimary: false })
   public email: string
 
   @column.dateTime({ autoCreate: true })
