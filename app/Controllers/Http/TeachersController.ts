@@ -42,7 +42,7 @@ export default class TeachersController {
   public async destroy({ params, response }: HttpContextContract) {
     const { id } = params
     const teacher = await Teacher.findBy('id', id)
-    const status = await teacher?.delete()
+    await teacher?.delete()
 
     return teacher
       ? response.status(200).json({
