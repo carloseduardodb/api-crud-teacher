@@ -36,7 +36,7 @@ export default class TeachersController {
     teacher.surname = surname
     teacher.email = email
     await teacher.save()
-    return response.json(teacher)
+    return response.status(200).json(teacher)
   }
 
   public async destroy({ params, response }: HttpContextContract) {
